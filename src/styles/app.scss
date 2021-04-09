@@ -1,0 +1,63 @@
+.app {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background-image: linear-gradient(to left top, #01a7b3, #00a9dd, #62a3f7, #bb94f4, #ff7fd0);
+    position: relative;
+
+    .chat_rooms {
+        display: none;
+        position: absolute;
+        left: .5rem;
+        top: .5rem;
+    }
+
+    .app_container {
+        width: 60%;
+        min-width: 550px;
+        max-width: 1050px;
+        height: 75vh;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+    
+}
+
+@media only screen and (max-width: 768px) {
+
+    .app {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+
+        .chat_rooms {
+            display: flex !important;
+            width: 95%;
+            height: 15%;
+            position: unset;
+        }
+
+        .app_container {
+            height: 85%;
+            width: 100% !important;
+            min-width: 350px !important;
+        }
+    }
+}
+
+
+
+@import './chat';
+@import './sidebar';
+@import './home.scss';
+@import './roomsContent';
+@import './musicPlayer';
+@import './ChatMenuForMobile';

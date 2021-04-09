@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
+
+.home {
+    width: 25%;
+    min-width: 390px;
+    max-width: 400px;
+    height: 70vh;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .login {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: rgb(255, 255, 255);
+        width: 75%;
+        height: 80%;
+        border-radius: 1rem;
+        box-shadow: rgba(50, 50, 93, 0.25) 
+                    0px 50px 100px -20px, 
+                    rgba(0, 0, 0, 0.3) 
+                    0px 30px 60px -30px,
+                    rgba(10, 37, 64, 0.35) 
+                    0px -2px 6px 0px inset;
+
+        #smile-icon {
+            position: absolute;
+            top: -1rem;
+            width: 3rem;
+            height: auto;
+        }
+
+        #google-logo {
+            width: 50px;
+            height: auto;
+            margin: 3rem 0 0.5rem 0;
+        }
+
+        h2 {
+            font-family: 'Rubik', sans-serif;
+        }
+
+        .login_button {
+            margin: 4rem 0 2rem 0;
+            width: 80%;
+            height: fit-content;
+            background: rgb(115, 166, 233);
+            color: rgb(27, 27, 27);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            &:hover {
+                cursor: pointer;
+                color: white;
+                background-color:rgb(86, 140, 211);
+            }
+
+            #logo-btn {
+                align-self: center;
+                height: 2rem;
+                width: auto;
+            }
+
+            p {
+                margin-left: 0.5rem;
+                text-align: center;
+                font-size: medium;
+                font-family: 'Rubik', sans-serif;
+            }
+        }
+
+        #app-logo {
+            width: 5rem;
+            height: auto;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .home {
+        width: 70%;
+        min-width: 250px;
+        max-width: 350px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

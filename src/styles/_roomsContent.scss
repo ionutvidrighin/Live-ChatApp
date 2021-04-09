@@ -1,0 +1,225 @@
+.chatroom__content {
+    position: absolute;
+    bottom: -0.1rem !important;
+    z-index: 4;
+    width: 100% !important;
+    height: 90% !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*background-image: linear-gradient(to top, #ffffff, #ecefff, #cde2ff, #a3d8ff, #65cfff);
+    /*background-color: #00BADF;*/
+    background-image: linear-gradient(to top, #e0e0e0, #d2dcf0, #adddfd, #74e0fe, #12e3eb);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0 0 1rem 1rem;
+
+
+    .conversations {
+        position: relative;
+        flex: 0.8;
+        width: 100%;
+        height: 100%;
+        padding: 0 2rem 0 8rem;
+        display: flex;
+        flex-direction: column;
+        overflow: scroll;
+        overflow-x: hidden;
+        
+        .message_sender {
+            position: relative;
+            padding: 0.5rem;
+            margin: 1rem 0 0.5rem 0;
+            width: fit-content;
+            height: fit-content;
+            background-color: #ebbee5;
+            border-radius: 0.5rem;
+
+            #name {
+                font-weight: bold;
+                font-size: 0.6rem;
+                position: absolute;
+                top: -0.7rem;
+                left: 0.1rem;
+            }
+
+            #date {
+                font-size: 0.5rem;
+                position: absolute;
+                bottom: -0.6rem;
+                left: 0.2rem;
+            }
+
+            .edit-delete_section {
+                display: flex;
+                justify-content: space-between;
+
+                .MuiSvgIcon-root {
+                    font-size: 1.2rem;
+                    cursor: pointer;
+                }
+
+                .show {
+                    width: 15px;
+                    height: 15px;
+                }
+
+                .hide {
+                    display: none;
+                }
+            }
+
+            .edit__form {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .MuiSvgIcon-root {
+                    font-size: 20px;
+                    margin-left: 3px;
+                }
+
+                .show-editField {
+                    border-radius: 5px;
+                    padding: 5px;
+                    border: none;
+                    &:focus {
+                        outline: none;
+                        background-color: rgb(250, 250, 250);
+                        font-weight: bold;
+                    }
+        
+                }
+
+                .hide-editField, 
+                .hide-closeEditField {
+                    display: none;
+                }
+
+                .show-editField, 
+                .show-closeEditField {
+                    display: inherit;
+                    cursor: pointer;
+                }
+
+            }
+
+            #submit-edit__btn {
+                display: none;
+            }
+        }
+
+        .message_receiver {
+            position: relative;
+            margin-left: auto;
+            background-color: rgba(115, 219, 17, 0.425);       
+        }
+
+        .visibile {
+            visibility: visible;
+            position: absolute;
+            right: 0rem;
+        }
+
+        .hide {
+            visibility: hidden;
+        }
+    }
+
+    .footer {
+        z-index: 4;
+        flex: 0.1;
+        width: 100%;
+        border-radius: 0 0 1rem 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;     
+
+        form {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            input {
+                width: 75%;
+                height: 90%;
+                margin-left: 2rem;
+                padding-left: 1rem;
+                border: none;
+                border-radius: 0.5rem;
+                background: rgb(204, 204, 204);
+                font-weight: bold;
+
+                &::placeholder {
+                    font-size: 0.6rem;
+                    padding-left: 0.2rem;
+                    font-style: italic;
+                }
+                &:focus {
+                    outline: none;
+                    background-color: rgb(241, 241, 241);
+                }
+            }
+    
+            button {
+                display: none;
+            }
+        }
+
+    }
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1025px){
+    .chatroom__content {
+        /*width: 350px !important;
+        min-width: 570px !important;
+        height: 37rem !important;*/
+
+        .footer {
+            border-radius: 0;
+            background: transparent;
+        }
+    }
+
+    .conversations {
+        padding: 1rem !important;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .chatroom__content {
+        width: 95% !important;
+        height: 85% !important;
+
+
+        .footer {
+            border-radius: 0;
+            background: transparent;
+        }
+    }
+}
+
+@media only screen and (min-width: 200px) and (max-width: 767px) {
+    .chatroom__content {
+        width: 95% !important;
+        height: 85% !important;
+
+        .footer {
+            border-radius: 0;
+            background: transparent;
+        }
+    }
+
+    .conversations {
+        padding: 1.5rem !important;
+    }
+}

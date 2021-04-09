@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
+.sidebar {
+    width: 25%;
+    min-width: 170px;
+    max-width: 20rem;
+    height: 90%;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: -7rem;
+    bottom: -2rem;
+    z-index: 5;
+    
+
+    .sidebar__header {
+        width: 75%;
+        flex: 0.1;
+        border-bottom: 1px solid gray;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+        #menu_bullets {
+            position: absolute;
+            right: -1.2rem;
+            top: -0.2rem;
+            font-size: 2rem;
+            cursor: pointer;
+            color: rgb(255, 118, 198);
+        }
+
+        .MuiFab-root {
+            z-index: 4;
+            position: absolute;
+            color: black;
+            border-radius: 50%;
+            font-size: 2.5rem;
+            left: -3.5rem;
+            top: -1rem;
+            background-image: linear-gradient(to right top, #e36bff, #d48efd, #cba8f5, #cabee6, #d1d1d1);
+    
+            .MuiSvgIcon-root {
+                width: 1.2em !important;
+                height: 1.2em !important;
+    
+                &:hover {
+                color: white !important;
+                width: 1.3em !important;
+                height: 1.3em !important;
+
+                }
+            }
+
+        }
+
+        h4 {
+            color: rgb(230, 230, 230);
+            font-family: 'Josefin Sans', sans-serif;
+        }
+
+
+        .test-toggle {
+            opacity: 0;
+            width: 6rem;
+            height: 2.5rem;
+            text-align: center;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            position: absolute;
+            left: -1rem;
+            top: -3.5rem;
+        }
+    
+        .show-up {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 1;
+            transition: all .5s ease-in-out;
+            position: absolute;
+            left: -1rem;
+            top: -3.5rem;
+            width: 6rem;
+            height: 2.5rem;
+            text-align: center;
+            font-family: 'Josefin Sans', sans-serif;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+    }
+
+    .rooms__container {
+        flex: 0.9;
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .room {
+            width: 90%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color:rgb(207, 207, 207);
+            text-decoration: none;
+            text-transform: capitalize;
+            font-family: 'Abel', sans-serif;
+            font-size: 0.9rem;
+        }
+
+        .channel {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: inherit !important;
+            padding: 0.3rem;
+            margin: 0.3rem 0 0.3rem 0;
+            cursor: pointer;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.1);
+                border-radius: 1rem;
+                color:rgb(255, 255, 255);
+            }
+        }
+
+        h3 {
+            width: 100%;
+            text-align: center;
+        }
+    }
+}
+
+@media only screen and (max-width: 770px) {
+    .sidebar {
+        display: none; 
+        /*width: 100%;
+        height: 2rem;
+        background: chartreuse;
+        border-radius: none;
+        position: relative;
+        /* left: -2.5rem;
+        bottom: -5px; */
+    }
+}
+
+
+@import './sideBarUserProfile';
