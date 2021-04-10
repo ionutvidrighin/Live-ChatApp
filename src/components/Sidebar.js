@@ -9,7 +9,7 @@ import Avatar from '@material-ui/core/Avatar';
 import ChatRoomIcon from '../avatars/chat-room.jpg';
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 
-const Sidebar = ({setMusic}) => {
+const Sidebar = () => {
 
     const user = useContext(UserContext);
     const [profileState, setprofileState] = useState(false);

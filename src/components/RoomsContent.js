@@ -6,6 +6,7 @@ import firebase from 'firebase';
 import EditIcon from '@material-ui/icons/Edit';
 import DeleteOutlineIcon from '@material-ui/icons/DeleteOutline';
 import HighlightOffIcon from '@material-ui/icons/HighlightOff';
+import msgTone from '../avatars/message_tone.mp3';
 import Bg1 from '../avatars/bg1.jpg';
 import Bg2 from '../avatars/bg2.jpg';
 import Bg3 from '../avatars/bg3.jpg';
@@ -31,9 +32,24 @@ const RoomsContent = ({backgroundImg, setRoomsContentRender}) => {
                 data: message.data()
             }) ))
         ))
-        setRoomsContentRender(true);
-
     },[roomId])
+
+    useEffect(() => {
+        setRoomsContentRender(true);
+    })
+    
+    const msgRef = useRef();
+    useEffect(() => {
+        const triggerMessageTone = async () => {
+            let arr = await getMessage[getMessage.length - 1];
+            if (arr === undefined) return;
+            else if (arr.data.name !== user.displayName)  {
+                msgRef.current.play();
+                return;
+            }
+        }
+        triggerMessageTone()       
+    },[getMessage])
 
     const sendNewMessage = (e) => {
         e.preventDefault();
@@ -87,6 +103,7 @@ const RoomsContent = ({backgroundImg, setRoomsContentRender}) => {
 
     return (
         <div ref={changeBgImg} className="chatroom__content">
+            <audio ref={msgRef} src={msgTone}></audio>
 
             <div className="conversations">
                 {
@@ -106,7 +123,7 @@ const RoomsContent = ({backgroundImg, setRoomsContentRender}) => {
                                     className={ id === showMsgUniqueId && data.name === user.displayName ? "show" : "hide"} 
                                     onClick={ () => (function(){
                                                         if(data.name === user.displayName) {
-                                                        setMsgId(id)
+                                                        setMsgId(id);
                                                     }
                                                 })() }
                                 />
@@ -155,7 +172,12 @@ const RoomsContent = ({backgroundImg, setRoomsContentRender}) => {
                         type="text" 
                         placeholder="type a message..."
                     />
-                    <button onClick={sendNewMessage} type="submit">Send</button>
+                    <button 
+                        onClick={sendNewMessage} 
+                        type="submit"
+                    >
+                        Send
+                    </button>
                 </form>
             </div>
         </div>
