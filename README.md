@@ -4,7 +4,7 @@ App will get improvements soon
 
 LiveChat app built with MERN Stack + Firebase for login.
 
-App deployed on Firebase:  https://live-chat-7b149.firebaseapp.com/
+Deployed on Firebase:  https://live-chat-7b149.firebaseapp.com/
 
 About the app:
 A classic live chat application built with ReactJS on the Front-end and with NodeJS (Express & MongoDB) + Google Firebase on the Back-end.
