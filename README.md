@@ -1,3 +1,4 @@
+App will get improvements soon
 ################################## 
 
 LiveChat app built with MERN Stack + Firebase for login.
