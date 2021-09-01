@@ -1,4 +1,4 @@
-App will get improvements soon
+
 
 ################################## 
 
